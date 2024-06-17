@@ -19,7 +19,7 @@ const TodoItem = ({
     // console.log(todo);
     try {
       await axios.put(`http://localhost:8080/api/todos/${id}`, {
-        completed: completed ? true : false,
+        completed: completed,
         title: todo.title, //현재선택한투두
       });
       const resp = await axios.get("http://localhost:8080/api/todos");
